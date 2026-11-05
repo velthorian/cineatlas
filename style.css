@@ -17,3 +17,6 @@ dialog{border:0;padding:0;background:var(--paper);color:var(--ink);width:min(113
 #detail{overflow:hidden}#detail-content{max-height:92svh;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#b9bcad var(--paper)}
 @media(max-width:760px){#detail-content{max-height:100svh}.nav-link{font-size:11px}.filters button{font-size:10px}.card h3{font-size:12px}.card-year,.rating{font-size:10px}.sheet-tabs button{font-size:12px}.person-name{font-size:11px}.person-character{font-size:10px}.sheet-facts dd{font-size:11px}.sheet-overview{font-size:13px}.gallery-intro{font-size:12px}}
 @media(min-width:761px){.card h3{font-size:14px}.card-year,.rating{font-size:11px}.filters button{font-size:11px}.sheet-tabs button{font-size:12px}.person-name{font-size:12px}.person-character{font-size:10px}.sheet-overview{font-size:14px}.sheet-facts dd{font-size:12px}}
+@media(min-width:761px){.sheet-backdrop{height:clamp(260px,36vh,350px)}}
+.hero-indicator{height:44px;padding:21px 0}.hero-controls{bottom:29px}
+@media(max-width:760px){.hero-indicator{width:28px}.hero-controls{bottom:25px}}
