@@ -7,7 +7,10 @@ La clé API TMDB v3 publique a été intégrée avec l’accord du propriétaire
 
 ## TMDB
 Le bouton « Configurer TMDB » accepte une clé API v3 ou un jeton de lecture ; l'accès reste en mémoire dans l'onglet. Pour un catalogue partagé, une clé API v3 destinée au navigateur peut être placée dans `config.js` : elle sera publique. Ne jamais publier de secret serveur. Un serveur intermédiaire est nécessaire pour protéger un accès partagé.
-La recherche interroge la première page de recherche multi et les filmographies des quatre premières personnes trouvées. Les séries sont exclues. Les filtres et tris portent sur les films chargés. La liste populaire est paginée.
+La recherche multi est paginée et complète chaque page avec les filmographies des quatre premières personnes trouvées. Les séries sont exclues. Les filtres et tris portent sur les films chargés. La liste populaire est paginée.
+
+## Interface
+Direction visuelle éditoriale ivoire et corail, trois films à la une sélectionnables, apparitions des cartes au défilement, retours visuels sur les favoris. La fiche comprend trois onglets (histoire, casting, affiches) et une navigation clavier. Sur mobile, elle occupe tout l’écran. Les animations respectent la préférence de réduction des mouvements.
 Documentation : https://developer.themoviedb.org/docs/getting-started
 
 ## GitHub Pages

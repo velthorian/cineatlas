@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#151515"><meta name="description" content="Un film en tête, une envie de découverte. Explorez le cinéma, son casting et ses plus belles affiches avec CinéAtlas.">
+  <title>CinéAtlas — Le cinéma vous va si bien.</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://image.tmdb.org"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css"><script src="config.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#catalog">Aller aux films</a>
+<header class="site-header">
+  <a class="brand" href="./" aria-label="CinéAtlas, accueil"><span class="brand-symbol" aria-hidden="true">✳</span> cinéatlas<span class="brand-dot">®</span></a>
+  <nav aria-label="Navigation principale"><button id="explore" class="nav-link active">Explorer<span class="nav-dot"></span></button><button id="favorites" class="nav-link">Ma collection <span id="count">0</span></button></nav>
+  <a class="header-note" href="#catalog">Le cinéma, sans fin.<span aria-hidden="true">↘</span></a>
+</header>
+<main>
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-backdrop"><img id="hero-image" src="https://image.tmdb.org/t/p/w1280/pbrkL804c8yAv3zBZR4QPEafpAR.jpg" alt="" fetchpriority="high"></div>
+    <div class="hero-shade"></div><div class="hero-grain" aria-hidden="true"></div>
+    <div class="hero-topline"><span><i class="live-dot"></i> LE CINÉMA EST UN VOYAGE</span><span class="hero-edition">LA SÉLECTION CINÉATLAS — 01</span></div>
+    <div class="hero-copy"><p class="hero-kicker">Des films. Des visages. Des émotions.</p><h1 id="hero-heading">Le prochain film<br>qui vous <em>reste.</em></h1><p class="hero-description">Retrouvez ce titre sur le bout de la langue.<br>Ou laissez une nouvelle histoire vous trouver.</p><a class="hero-cta" href="#catalog">Trouver mon prochain film <span aria-hidden="true">↗</span></a></div>
+    <button id="featured" class="featured"><span class="featured-play" aria-hidden="true">↗</span><span><small>À L’AFFICHE DE NOTRE IMAGINAIRE</small><strong id="featured-title">Interstellar</strong><span id="featured-meta">Christopher Nolan · 2014</span></span><span class="featured-number" aria-hidden="true">01 / 03</span></button>
+    <div class="hero-controls" aria-label="Sélection mise en avant"><button class="hero-indicator active" data-feature="0" aria-label="Mettre Interstellar à l’affiche" aria-pressed="true"></button><button class="hero-indicator" data-feature="1" aria-label="Mettre Dune : Deuxième Partie à l’affiche" aria-pressed="false"></button><button class="hero-indicator" data-feature="2" aria-label="Mettre La La Land à l’affiche" aria-pressed="false"></button></div>
+    <span class="hero-side" aria-hidden="true">SCROLL TO DISCOVER ↓</span>
+  </section>
+  <section class="discovery" aria-label="Rechercher un film">
+    <div class="search-intro"><span class="micro">LE DÉBUT D’UNE BELLE HISTOIRE</span><h2>Vous cherchez <em>quelqu’un ?</em></h2><p>Un film, un acteur, un réalisateur. C’est par ici.</p></div>
+    <div class="search-area"><form id="search" role="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.7"></circle><path d="m16 16 5 5"></path></svg><label class="sr" for="query">Rechercher un film, un acteur ou un réalisateur</label><input id="query" type="search" placeholder="Essayez « Emma Stone »" autocomplete="off" maxlength="160"><button class="search-submit" aria-label="Rechercher"><span class="search-label">Rechercher</span><span aria-hidden="true">↗</span></button></form><div class="suggestions"><span>ET POURQUOI PAS</span><button data-query="Christopher Nolan">Christopher Nolan ↗</button><button data-query="Interstellar">Interstellar ↗</button><button data-query="Emma Stone">Emma Stone ↗</button></div></div>
+  </section>
+  <section id="catalog" class="catalog" aria-labelledby="heading">
+    <div class="section-top"><div><div class="micro"><span class="section-marker"></span> LE SEPTIÈME ART, À PORTÉE DE CLIC</div><h2 id="heading">À découvrir<span class="orange">.</span></h2></div><label class="sort"><span>Trier les films</span><select id="sort"><option value="popular">Popularité</option><option value="rating">Les mieux notés</option><option value="recent">Plus récents</option><option value="title">De A à Z</option></select></label></div>
+    <div class="catalog-toolbar"><div class="filters" aria-label="Filtrer par genre"><button class="selected" data-genre="" aria-pressed="true">Tout le cinéma</button><button data-genre="878" aria-pressed="false">Science-fiction</button><button data-genre="18" aria-pressed="false">Drame</button><button data-genre="53" aria-pressed="false">Thriller</button><button data-genre="35" aria-pressed="false">Comédie</button><button data-genre="16" aria-pressed="false">Animation</button></div><span id="result-count" class="result-count"></span></div>
+    <p id="status" role="status" aria-live="polite"></p><div id="grid" class="grid"></div>
+    <div id="empty" class="empty hidden"><span aria-hidden="true">◌</span><h3 id="empty-title">Une nouvelle histoire vous attend.</h3><p id="empty-copy">Essayez un autre titre ou changez de genre.</p><button id="reset" class="button button-dark">Explorer les films ↗</button></div>
+    <div class="load-more"><button id="more" class="button button-outline hidden">Encore un peu de cinéma <span aria-hidden="true">↓</span></button></div>
+  </section>
+  <section class="collection-banner"><div class="orbit-art" aria-hidden="true"><span>✳</span><i></i><i></i></div><div class="collection-copy"><span class="micro">VOTRE CINÉMATHÈQUE PERSONNELLE</span><h2>Certains films<br>ne se quittent <em>jamais.</em></h2><p>Un coup de cœur ? Gardez-le. Votre collection vous attend,<br>avec les histoires que vous avez envie de retrouver.</p><button id="collection-cta" class="text-link">Ouvrir ma collection <span aria-hidden="true">↗</span></button></div><div class="collection-stamp" aria-hidden="true">UNE VIE<br>DE CINÉMA.<span>♡</span></div></section>
+</main>
+<footer><div class="footer-main"><a class="brand" href="./"><span class="brand-symbol" aria-hidden="true">✳</span> cinéatlas<span class="brand-dot">®</span></a><p>Pour les curieux.<br>Les passionnés. Et les autres.</p><button id="settings" class="footer-settings">Connexion TMDB ↗</button></div><div class="footer-bottom"><p>Données & images : <a href="https://www.themoviedb.org/" target="_blank" rel="noopener">TMDB</a>.<br>This product uses the TMDB API but is not endorsed or certified by TMDB.</p><span>Les affiches appartiennent à leurs ayants droit.<br>Les favoris restent sur cet appareil.</span><a href="#" class="back-top">RETOUR EN HAUT ↑</a></div></footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<dialog id="detail" aria-label="Fiche du film"><button class="close" aria-label="Fermer la fiche"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"></path></svg></button><div id="detail-content"></div></dialog>
+<dialog id="configuration" aria-labelledby="config-title"><button class="close" aria-label="Fermer les paramètres">×</button><span class="micro">LE CATALOGUE, EN GRAND</span><h2 id="config-title">Votre accès<br>au <em>cinéma.</em></h2><p>La clé publique du site ouvre le catalogue TMDB. Vous pouvez utiliser votre propre clé API v3 ou votre jeton de lecture pour cet onglet.</p><form id="credentials"><label for="token">Clé ou jeton TMDB</label><input id="token" type="password" required autocomplete="off" placeholder="Votre accès TMDB"><button class="button button-orange">Vérifier et connecter ↗</button><button type="button" id="demo" class="button button-outline">Découvrir la démonstration</button><p id="config-status" role="status"></p></form><a href="https://www.themoviedb.org/settings/api" target="_blank" rel="noopener" class="text-link">Obtenir une clé TMDB ↗</a></dialog>
+</body></html>
