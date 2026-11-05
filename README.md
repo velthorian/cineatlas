@@ -1,25 +1,34 @@
 # CinéAtlas
-Site statique en français pour explorer les films, rechercher par titre, acteur ou réalisateur, afficher le casting, télécharger les affiches originales et sauvegarder des favoris sur son appareil.
 
-## Ouvrir localement
-Depuis ce dossier : `python3 -m http.server 8000`, puis ouvrir http://localhost:8000.
-La clé API TMDB v3 publique a été intégrée avec l’accord du propriétaire. Sans accès TMDB, huit films de démonstration sont disponibles. Le mode démo n'est pas un catalogue complet. Les images et les polices nécessitent Internet.
+**Le cinéma vous va si bien.**
 
-## TMDB
-Le bouton « Configurer TMDB » accepte une clé API v3 ou un jeton de lecture ; l'accès reste en mémoire dans l'onglet. Pour un catalogue partagé, une clé API v3 destinée au navigateur peut être placée dans `config.js` : elle sera publique. Ne jamais publier de secret serveur. Un serveur intermédiaire est nécessaire pour protéger un accès partagé.
-La recherche multi est paginée et complète chaque page avec les filmographies des quatre premières personnes trouvées. Les séries sont exclues. Les filtres et tris portent sur les films chargés. La liste populaire est paginée.
+CinéAtlas est un espace de découverte pour les curieux et les passionnés de cinéma. Un titre oublié, un acteur que vous aimez, une affiche à garder : chaque recherche ouvre la porte à une nouvelle histoire.
 
-## Interface
-Direction visuelle éditoriale ivoire et corail, trois films à la une sélectionnables, apparitions des cartes au défilement, retours visuels sur les favoris. La fiche comprend trois onglets (histoire, casting, affiches) et une navigation clavier. Sur mobile, elle occupe tout l’écran. Les animations respectent la préférence de réduction des mouvements.
-Documentation : https://developer.themoviedb.org/docs/getting-started
+[**Explorer CinéAtlas ↗**](https://velthorian.github.io/cineatlas/)
 
-## GitHub Pages
-1. Importer ce dossier (y compris `.github`) à la racine du dépôt public `cineatlas`, branche `main`.
-2. Dans Settings → Pages → Source, choisir **GitHub Actions**.
-3. Lancer le workflow « Publier CinéAtlas » ou pousser un commit.
-4. Consulter l'URL retournée par le déploiement (normalement https://velthorian.github.io/cineatlas/).
-Documentation : https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
+## À découvrir
 
-## Droits et données
+- **Recherche de films** par titre, acteur ou réalisateur.
+- **Fiches détaillées** avec synopsis, durée, genres et note TMDB.
+- **Casting et filmographies** pour poursuivre la découverte d’un artiste à l’autre.
+- **Affiches en résolution originale** à consulter et à télécharger.
+- **Collection personnelle** pour retrouver vos coups de cœur sur votre appareil.
+- **Filtres par genre et tri** par popularité, note, date ou titre.
+
+L’interface s’adapte aux ordinateurs et aux téléphones. Les fiches réunissent l’histoire, le casting et les affiches dans trois onglets. Les animations respectent les préférences de réduction des mouvements.
+
+## Votre collection
+
+Les favoris sont enregistrés dans le navigateur, sans création de compte. Ils restent propres à l’appareil et au navigateur utilisés ; ils ne sont pas synchronisés entre appareils.
+
+## Données et affiches
+
+Les informations et les images proviennent de [The Movie Database (TMDB)](https://www.themoviedb.org/). Leur disponibilité dépend du catalogue TMDB. Les filtres et les tris s’appliquent aux films chargés.
+
 This product uses the TMDB API but is not endorsed or certified by TMDB.
-Les images appartiennent à leurs ayants droit. Télécharger une affiche ne confère aucun droit de redistribution ou d'exploitation commerciale. Les favoris sont stockés localement dans le navigateur.
+
+Les affiches appartiennent à leurs ayants droit. Leur téléchargement ne confère aucun droit de redistribution ni d’exploitation commerciale.
+
+---
+
+Un projet de [Velthorian](https://github.com/velthorian), pour l’amour du cinéma.
